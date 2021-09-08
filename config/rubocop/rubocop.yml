@@ -6,7 +6,6 @@ AllCops:
     - "node_modules/**/*" # rubocop config/default.yml
     - "vendor/**/*" # rubocop config/default.yml
     - "db/schema.rb"
-    - "bin/bundle"
 
 #################### Layout ################################
 
@@ -132,7 +131,7 @@ Metrics/CyclomaticComplexity:
 # * 警告 120文字
 # * 禁止 160文字
 # のイメージ
-Layout:
+Metrics/LineLength:
   Max: 160
   Exclude:
     - "db/migrate/*.rb"
