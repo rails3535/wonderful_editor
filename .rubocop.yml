@@ -1,3 +1,6 @@
+# 将来的には対応する規約の読込
+inherit_from: .rubocop_todo.yml
+
 require:
   - rubocop-rails
 
