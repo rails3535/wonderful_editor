@@ -26,10 +26,6 @@ RSpec.configure do |config|
     # ...rather than:
     #     # => "be bigger than 2"
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
-    config.filter_rails_from_backtrace!
-    # arbitrary gems may also be filtered via:
-    # config.filter_gems_from_backtrace("gem name")
-    config.include FactoryBot::Syntax::Methods # 追加
   end
 
   # rspec-mocks config goes here. You can use an alternate test double
@@ -95,4 +91,8 @@ RSpec.configure do |config|
   #   # test failures related to randomization by passing the same `--seed` value
   #   # as the one that triggered the failure.
   #   Kernel.srand config.seed
+
+  config.define_derived_metadata do |meta|
+    meta[:aggregate_failures] = true unless meta.has_key?(:aggregate_failures)
+  end
 end
