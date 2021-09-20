@@ -31,6 +31,7 @@ gem "rack-cors"
 gem "bootsnap", ">= 1.4.2", require: false
 
 group :development, :test do
+  gem "active_model_serializers", "~> 0.10.0"
   gem "factory_bot_rails"
   gem "faker"
   gem "pry-byebug"
